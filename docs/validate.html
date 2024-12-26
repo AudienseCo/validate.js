@@ -10,28 +10,28 @@
 <body>
   <div id="container">
     <div id="background"></div>
-    
+
     <ul class="sections">
-        
+
           <li id="title">
               <div class="annotation">
                   <h1>validate.js</h1>
               </div>
           </li>
-        
-        
-        
+
+
+
         <li id="section-1">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              
+
             </div>
-            
+
             <div class="content"><div class='highlight'><pre><span class="hljs-comment">/*!
- * validate.js 0.13.1
+ * validate.js 0.13.2
  *
  * (c) 2013-2020 Nicklas Ansman, 2013 Wrapp
  * Validate.js may be freely distributed under the MIT license.
@@ -41,13 +41,13 @@
 
 (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">exports, module, define</span>) </span>{
 <span class="hljs-meta">  "use strict"</span>;</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-2">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-2">&#182;</a>
               </div>
@@ -65,7 +65,7 @@ The options are the following:</p>
 <p>Please note that the options are also passed to each validator.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">var</span> validate = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">attributes, constraints, options</span>) </span>{
     options = v.extend({}, v.options, options);
 
@@ -80,13 +80,13 @@ The options are the following:</p>
   };
 
   <span class="hljs-keyword">var</span> v = validate;</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-3">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-3">&#182;</a>
               </div>
@@ -96,7 +96,7 @@ The first argument is the target object and the remaining arguments will be
 used as sources.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>  v.extend = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">obj</span>) </span>{
     [].slice.call(<span class="hljs-built_in">arguments</span>, <span class="hljs-number">1</span>).forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">source</span>) </span>{
       <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> attr <span class="hljs-keyword">in</span> source) {
@@ -107,13 +107,13 @@ used as sources.</p>
   };
 
   v.extend(validate, {</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-4">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-4">&#182;</a>
               </div>
@@ -121,7 +121,7 @@ used as sources.</p>
 The toString function will allow it to be coerced into a string</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    version: {
       <span class="hljs-attr">major</span>: <span class="hljs-number">0</span>,
       <span class="hljs-attr">minor</span>: <span class="hljs-number">13</span>,
@@ -135,26 +135,26 @@ The toString function will allow it to be coerced into a string</p>
         <span class="hljs-keyword">return</span> version;
       }
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-5">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-5">&#182;</a>
               </div>
               <p>Below is the dependencies that are used in validate.js</p>
 
             </div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-6">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-6">&#182;</a>
               </div>
@@ -164,17 +164,17 @@ override this attribute to be the constructor of that promise.
 Since jQuery promises aren’t A+ compatible they won’t work.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    <span class="hljs-built_in">Promise</span>: <span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Promise</span> !== <span class="hljs-string">"undefined"</span> ? <span class="hljs-built_in">Promise</span> : <span class="hljs-comment">/* istanbul ignore next */</span> <span class="hljs-literal">null</span>,
 
     <span class="hljs-attr">EMPTY_STRING_REGEXP</span>: <span class="hljs-regexp">/^\s*$/</span>,</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-7">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-7">&#182;</a>
               </div>
@@ -183,7 +183,7 @@ Will return an array of the format:
     [{attribute: “<attribute name>“, error: “<validation result>“}, …]</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    runValidations: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">attributes, constraints, options</span>) </span>{
       <span class="hljs-keyword">var</span> results = []
         , attr
@@ -197,29 +197,29 @@ Will return an array of the format:
       <span class="hljs-keyword">if</span> (v.isDomElement(attributes) || v.isJqueryElement(attributes)) {
         attributes = v.collectFormValues(attributes);
       }</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-8">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-8">&#182;</a>
               </div>
               <p>Loops through each constraints, finds the correct validator and run it.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">for</span> (attr <span class="hljs-keyword">in</span> constraints) {
         value = v.getDeepObjectValue(attributes, attr);</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-9">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-9">&#182;</a>
               </div>
@@ -230,7 +230,7 @@ This is useful when you want to have different
 validations depending on the attribute value.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>        validators = v.result(constraints[attr], value, attributes, attr, options, constraints);
 
         <span class="hljs-keyword">for</span> (validatorName <span class="hljs-keyword">in</span> validators) {
@@ -242,13 +242,13 @@ validations depending on the attribute value.</p>
           }
 
           validatorOptions = validators[validatorName];</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-10">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-10">&#182;</a>
               </div>
@@ -259,7 +259,7 @@ This is useful when you want to have different
 validations depending on the attribute value.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>          validatorOptions = v.result(validatorOptions, value, attributes, attr, options, constraints);
           <span class="hljs-keyword">if</span> (!validatorOptions) {
             <span class="hljs-keyword">continue</span>;
@@ -283,13 +283,13 @@ validations depending on the attribute value.</p>
 
       <span class="hljs-keyword">return</span> results;
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-11">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-11">&#182;</a>
               </div>
@@ -297,7 +297,7 @@ validations depending on the attribute value.</p>
 output format.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    processValidationResults: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">errors, options</span>) </span>{
       errors = v.pruneEmptyErrors(errors, options);
       errors = v.expandMultipleErrors(errors, options);
@@ -313,13 +313,13 @@ output format.</p>
 
       <span class="hljs-keyword">return</span> v.isEmpty(errors) ? <span class="hljs-literal">undefined</span> : errors;
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-12">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-12">&#182;</a>
               </div>
@@ -329,27 +329,27 @@ validation promises have been completed.
 It can be called even if no validations returned a promise.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">async</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">attributes, constraints, options</span>) </span>{
       options = v.extend({}, v.async.options, options);
 
       <span class="hljs-keyword">var</span> WrapErrors = options.wrapErrors || <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">errors</span>) </span>{
         <span class="hljs-keyword">return</span> errors;
       };</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-13">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-13">&#182;</a>
               </div>
               <p>Removes unknown attributes</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (options.cleanAttributes !== <span class="hljs-literal">false</span>) {
         attributes = v.cleanAttributes(attributes, constraints);
       }
@@ -377,13 +377,13 @@ It can be called even if no validations returned a promise.</p>
       });
       <span class="hljs-keyword">return</span> v({<span class="hljs-attr">single</span>: value}, {<span class="hljs-attr">single</span>: constraints}, options);
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-14">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-14">&#182;</a>
               </div>
@@ -394,37 +394,37 @@ This function modifies the input argument, it replaces the promises
 with the value returned from the promise.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    waitForResults: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">results</span>) </span>{</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-15">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-15">&#182;</a>
               </div>
               <p>Create a sequence of all the results starting with a resolved promise.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">return</span> results.reduce(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">memo, result</span>) </span>{</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-16">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-16">&#182;</a>
               </div>
               <p>If this result isn’t a promise skip it in the sequence.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">if</span> (!v.isPromise(result.error)) {
           <span class="hljs-keyword">return</span> memo;
         }
@@ -436,13 +436,13 @@ with the value returned from the promise.</p>
         });
       }, <span class="hljs-keyword">new</span> v.Promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">r</span>) </span>{ r(); })); <span class="hljs-comment">// A resolved promise</span>
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-17">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-17">&#182;</a>
               </div>
@@ -453,7 +453,7 @@ Example:</p>
 <pre><code>result(<span class="hljs-string">'foo'</span>) <span class="hljs-comment">// 'foo'</span>
 result(<span class="hljs-built_in">Math</span>.max, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">// 2</span></code></pre>
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    result: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>) </span>{
       <span class="hljs-keyword">var</span> args = [].slice.call(<span class="hljs-built_in">arguments</span>, <span class="hljs-number">1</span>);
       <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> value === <span class="hljs-string">'function'</span>) {
@@ -461,13 +461,13 @@ result(<span class="hljs-built_in">Math</span>.max, <span class="hljs-number">1<
       }
       <span class="hljs-keyword">return</span> value;
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-18">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-18">&#182;</a>
               </div>
@@ -475,34 +475,34 @@ result(<span class="hljs-built_in">Math</span>.max, <span class="hljs-number">1<
 number like many other <code>isNumber</code> functions do.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    isNumber: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>) </span>{
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">typeof</span> value === <span class="hljs-string">'number'</span> &amp;&amp; !<span class="hljs-built_in">isNaN</span>(value);
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-19">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-19">&#182;</a>
               </div>
               <p>Returns false if the object is not a function</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    isFunction: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>) </span>{
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">typeof</span> value === <span class="hljs-string">'function'</span>;
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-20">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-20">&#182;</a>
               </div>
@@ -510,85 +510,85 @@ number like many other <code>isNumber</code> functions do.</p>
 and a simple modulo check.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    isInteger: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>) </span>{
       <span class="hljs-keyword">return</span> v.isNumber(value) &amp;&amp; value % <span class="hljs-number">1</span> === <span class="hljs-number">0</span>;
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-21">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-21">&#182;</a>
               </div>
               <p>Checks if the value is a boolean</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    isBoolean: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>) </span>{
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">typeof</span> value === <span class="hljs-string">'boolean'</span>;
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-22">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-22">&#182;</a>
               </div>
               <p>Uses the <code>Object</code> function to check if the given argument is an object.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    isObject: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">obj</span>) </span>{
       <span class="hljs-keyword">return</span> obj === <span class="hljs-built_in">Object</span>(obj);
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-23">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-23">&#182;</a>
               </div>
               <p>Simply checks if the object is an instance of a date</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    isDate: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">obj</span>) </span>{
       <span class="hljs-keyword">return</span> obj <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Date</span>;
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-24">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-24">&#182;</a>
               </div>
               <p>Returns false if the object is <code>null</code> of <code>undefined</code></p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    isDefined: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">obj</span>) </span>{
       <span class="hljs-keyword">return</span> obj !== <span class="hljs-literal">null</span> &amp;&amp; obj !== <span class="hljs-literal">undefined</span>;
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-25">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-25">&#182;</a>
               </div>
@@ -596,7 +596,7 @@ and a simple modulo check.</p>
 function is considered a promise.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    isPromise: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">p</span>) </span>{
       <span class="hljs-keyword">return</span> !!p &amp;&amp; v.isFunction(p.then);
     },
@@ -617,20 +617,20 @@ function is considered a promise.</p>
       <span class="hljs-keyword">if</span> (v.isObject(<span class="hljs-built_in">document</span>) &amp;&amp; o === <span class="hljs-built_in">document</span>) {
         <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
       }</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-26">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-26">&#182;</a>
               </div>
               <p><a href="http://stackoverflow.com/a/384380/699304">http://stackoverflow.com/a/384380/699304</a></p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-comment">/* istanbul ignore else */</span>
       <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> HTMLElement === <span class="hljs-string">"object"</span>) {
         <span class="hljs-keyword">return</span> o <span class="hljs-keyword">instanceof</span> HTMLElement;
@@ -645,105 +645,105 @@ function is considered a promise.</p>
 
     <span class="hljs-attr">isEmpty</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>) </span>{
       <span class="hljs-keyword">var</span> attr;</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-27">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-27">&#182;</a>
               </div>
               <p>Null and undefined are empty</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (!v.isDefined(value)) {
         <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
       }</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-28">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-28">&#182;</a>
               </div>
               <p>functions are non empty</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (v.isFunction(value)) {
         <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
       }</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-29">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-29">&#182;</a>
               </div>
               <p>Whitespace only strings are empty</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (v.isString(value)) {
         <span class="hljs-keyword">return</span> v.EMPTY_STRING_REGEXP.test(value);
       }</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-30">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-30">&#182;</a>
               </div>
               <p>For arrays we use the length property</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (v.isArray(value)) {
         <span class="hljs-keyword">return</span> value.length === <span class="hljs-number">0</span>;
       }</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-31">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-31">&#182;</a>
               </div>
               <p>Dates have no attributes but aren’t empty</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (v.isDate(value)) {
         <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
       }</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-32">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-32">&#182;</a>
               </div>
               <p>If we find at least one property we consider it non empty</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (v.isObject(value)) {
         <span class="hljs-keyword">for</span> (attr <span class="hljs-keyword">in</span> value) {
           <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
@@ -753,13 +753,13 @@ function is considered a promise.</p>
 
       <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-33">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-33">&#182;</a>
               </div>
@@ -769,7 +769,7 @@ prefix it with % like this <code>Foo: %%{foo}</code> and it will be returned
 as <code>&quot;Foo: %{foo}&quot;</code></p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    format: v.extend(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">str, vals</span>) </span>{
       <span class="hljs-keyword">if</span> (!v.isString(str)) {
         <span class="hljs-keyword">return</span> str;
@@ -782,29 +782,29 @@ as <code>&quot;Foo: %{foo}&quot;</code></p>
         }
       });
     }, {</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-34">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-34">&#182;</a>
               </div>
               <p>Finds %{key} style patterns in the given string</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      FORMAT_REGEXP: <span class="hljs-regexp">/(%?)%\{([^\}]+)\}/g</span>
     }),</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-35">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-35">&#182;</a>
               </div>
@@ -813,23 +813,23 @@ Prettifying means replacing [._-] with spaces as well as splitting
 camel case words.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    prettify: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">str</span>) </span>{
       <span class="hljs-keyword">if</span> (v.isNumber(str)) {</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-36">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-36">&#182;</a>
               </div>
               <p>If there are more than 2 decimals round it to two</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">if</span> ((str * <span class="hljs-number">100</span>) % <span class="hljs-number">1</span> === <span class="hljs-number">0</span>) {
           <span class="hljs-keyword">return</span> <span class="hljs-string">""</span> + str;
         } <span class="hljs-keyword">else</span> {
@@ -848,82 +848,82 @@ camel case words.</p>
 
         <span class="hljs-keyword">return</span> str.toString();
       }</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-37">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-37">&#182;</a>
               </div>
               <p>Ensure the string is actually a string</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      str = <span class="hljs-string">""</span> + str;
 
       <span class="hljs-keyword">return</span> str</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-38">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-38">&#182;</a>
               </div>
               <p>Splits keys separated by periods</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>        .replace(<span class="hljs-regexp">/([^\s])\.([^\s])/g</span>, <span class="hljs-string">'$1 $2'</span>)</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-39">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-39">&#182;</a>
               </div>
               <p>Removes backslashes</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>        .replace(<span class="hljs-regexp">/\\+/g</span>, <span class="hljs-string">''</span>)</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-40">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-40">&#182;</a>
               </div>
               <p>Replaces - and - with space</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>        .replace(<span class="hljs-regexp">/[_-]/g</span>, <span class="hljs-string">' '</span>)</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-41">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-41">&#182;</a>
               </div>
               <p>Splits camel cased words</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>        .replace(<span class="hljs-regexp">/([a-z])([A-Z])/g</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">m0, m1, m2</span>) </span>{
           <span class="hljs-keyword">return</span> <span class="hljs-string">""</span> + m1 + <span class="hljs-string">" "</span> + m2.toLowerCase();
         })
@@ -942,13 +942,13 @@ camel case words.</p>
     <span class="hljs-attr">isArray</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>) </span>{
       <span class="hljs-keyword">return</span> {}.toString.call(value) === <span class="hljs-string">'[object Array]'</span>;
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-42">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-42">&#182;</a>
               </div>
@@ -956,7 +956,7 @@ camel case words.</p>
 is neither an array nor a function.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    isHash: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>) </span>{
       <span class="hljs-keyword">return</span> v.isObject(value) &amp;&amp; !v.isArray(value) &amp;&amp; !v.isFunction(value);
     },
@@ -1031,13 +1031,13 @@ is neither an array nor a function.</p>
         }
       });
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-43">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-43">&#182;</a>
               </div>
@@ -1049,7 +1049,7 @@ would return:
 {email: “<a href="mailto:foo@bar.com">foo@bar.com</a>“}</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    collectFormValues: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">form, options</span>) </span>{
       <span class="hljs-keyword">var</span> values = {}
         , i
@@ -1139,32 +1139,32 @@ would return:
       }
       <span class="hljs-keyword">return</span> str[<span class="hljs-number">0</span>].toUpperCase() + str.slice(<span class="hljs-number">1</span>);
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-44">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-44">&#182;</a>
               </div>
               <p>Remove all errors who’s error attribute is empty (null or undefined)</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    pruneEmptyErrors: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">errors</span>) </span>{
       <span class="hljs-keyword">return</span> errors.filter(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error</span>) </span>{
         <span class="hljs-keyword">return</span> !v.isEmpty(error.error);
       });
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-45">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-45">&#182;</a>
               </div>
@@ -1176,24 +1176,24 @@ Out
 when expanding the errors.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    expandMultipleErrors: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">errors</span>) </span>{
       <span class="hljs-keyword">var</span> ret = [];
       errors.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error</span>) </span>{</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-46">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-46">&#182;</a>
               </div>
               <p>Removes errors without a message</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">if</span> (v.isArray(error.error)) {
           error.error.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{
             ret.push(v.extend({}, error, {<span class="hljs-attr">error</span>: msg}));
@@ -1204,13 +1204,13 @@ when expanding the errors.</p>
       });
       <span class="hljs-keyword">return</span> ret;
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-47">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-47">&#182;</a>
               </div>
@@ -1218,7 +1218,7 @@ when expanding the errors.</p>
 message is prefixed by ^</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    convertErrorMessages: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">errors, options</span>) </span>{
       options = options || {};
 
@@ -1250,13 +1250,13 @@ message is prefixed by ^</p>
       });
       <span class="hljs-keyword">return</span> ret;
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-48">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-48">&#182;</a>
               </div>
@@ -1266,7 +1266,7 @@ Out:
 {“<attributeName>“: [{attribute: “<attributeName>“, …}]}</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    groupErrorsByAttribute: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">errors</span>) </span>{
       <span class="hljs-keyword">var</span> ret = {};
       errors.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error</span>) </span>{
@@ -1279,13 +1279,13 @@ Out:
       });
       <span class="hljs-keyword">return</span> ret;
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-49">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-49">&#182;</a>
               </div>
@@ -1295,7 +1295,7 @@ Out:
 [“&lt;message 1&gt;”, “&lt;message 2&gt;”]</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    flattenErrorsToArray: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">errors</span>) </span>{
       <span class="hljs-keyword">return</span> errors
         .map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error</span>) </span>{ <span class="hljs-keyword">return</span> error.error; })
@@ -1382,20 +1382,20 @@ Out:
   });
 
   validate.validators = {</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-50">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-50">&#182;</a>
               </div>
               <p>Presence validates that the value isn’t empty</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    presence: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, options</span>) </span>{
       options = v.extend({}, <span class="hljs-keyword">this</span>.options, options);
       <span class="hljs-keyword">if</span> (options.allowEmpty !== <span class="hljs-literal">false</span> ? !v.isDefined(value) : v.isEmpty(value)) {
@@ -1403,20 +1403,20 @@ Out:
       }
     },
     <span class="hljs-attr">length</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, options, attribute</span>) </span>{</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-51">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-51">&#182;</a>
               </div>
               <p>Empty values are allowed</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (!v.isDefined(value)) {
         <span class="hljs-keyword">return</span>;
       }
@@ -1435,20 +1435,20 @@ Out:
       <span class="hljs-keyword">if</span>(!v.isNumber(length)) {
         <span class="hljs-keyword">return</span> options.message || <span class="hljs-keyword">this</span>.notValid || <span class="hljs-string">"has an incorrect length"</span>;
       }</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-52">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-52">&#182;</a>
               </div>
               <p>Is checks</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (v.isNumber(is) &amp;&amp; length !== is) {
         err = options.wrongLength ||
           <span class="hljs-keyword">this</span>.wrongLength ||
@@ -1475,20 +1475,20 @@ Out:
       }
     },
     <span class="hljs-attr">numericality</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, options, attribute, attributes, globalOptions</span>) </span>{</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-53">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-53">&#182;</a>
               </div>
               <p>Empty values are fine</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (!v.isDefined(value)) {
         <span class="hljs-keyword">return</span>;
       }
@@ -1509,20 +1509,20 @@ Out:
         , prettify = options.prettify ||
           (globalOptions &amp;&amp; globalOptions.prettify) ||
           v.prettify;</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-54">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-54">&#182;</a>
               </div>
               <p>Strict will check that it is a valid looking number</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (v.isString(value) &amp;&amp; options.strict) {
         <span class="hljs-keyword">var</span> pattern = <span class="hljs-string">"^-?(0|[1-9]\\d*)"</span>;
         <span class="hljs-keyword">if</span> (!options.onlyInteger) {
@@ -1538,37 +1538,37 @@ Out:
             <span class="hljs-string">"must be a valid number"</span>;
         }
       }</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-55">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-55">&#182;</a>
               </div>
               <p>Coerce the value to a number unless we’re being strict.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (options.noStrings !== <span class="hljs-literal">true</span> &amp;&amp; v.isString(value) &amp;&amp; !v.isEmpty(value)) {
         value = +value;
       }</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-56">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-56">&#182;</a>
               </div>
               <p>If it’s not a number we shouldn’t continue since it will compare it.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (!v.isNumber(value)) {
         <span class="hljs-keyword">return</span> options.message ||
           options.notValid ||
@@ -1576,13 +1576,13 @@ Out:
           <span class="hljs-keyword">this</span>.message ||
           <span class="hljs-string">"is not a number"</span>;
       }</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-57">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-57">&#182;</a>
               </div>
@@ -1590,7 +1590,7 @@ Out:
 doesn’t pass.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (options.onlyInteger &amp;&amp; !v.isInteger(value)) {
         <span class="hljs-keyword">return</span> options.message ||
           options.notInteger ||
@@ -1602,13 +1602,13 @@ doesn’t pass.</p>
       <span class="hljs-keyword">for</span> (name <span class="hljs-keyword">in</span> checks) {
         count = options[name];
         <span class="hljs-keyword">if</span> (v.isNumber(count) &amp;&amp; !checks[name](value, count)) {</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-58">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-58">&#182;</a>
               </div>
@@ -1617,7 +1617,7 @@ For example the greaterThan check uses the message from
 this.notGreaterThan so we capitalize the name and prepend “not”</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>          <span class="hljs-keyword">var</span> key = <span class="hljs-string">"not"</span> + v.capitalize(name);
           <span class="hljs-keyword">var</span> msg = options[key] ||
             <span class="hljs-keyword">this</span>[key] ||
@@ -1652,20 +1652,20 @@ this.notGreaterThan so we capitalize the name and prepend “not”</p>
       <span class="hljs-keyword">if</span> (!v.isFunction(<span class="hljs-keyword">this</span>.parse) || !v.isFunction(<span class="hljs-keyword">this</span>.format)) {
         <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"Both the parse and format functions needs to be set to use the datetime/date validator"</span>);
       }</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-59">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-59">&#182;</a>
               </div>
               <p>Empty values are fine</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (!v.isDefined(value)) {
         <span class="hljs-keyword">return</span>;
       }
@@ -1678,13 +1678,13 @@ this.notGreaterThan so we capitalize the name and prepend “not”</p>
         , latest = options.latest ? <span class="hljs-keyword">this</span>.parse(options.latest, options) : <span class="hljs-literal">NaN</span>;
 
       value = <span class="hljs-keyword">this</span>.parse(value, options);</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-60">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-60">&#182;</a>
               </div>
@@ -1692,7 +1692,7 @@ this.notGreaterThan so we capitalize the name and prepend “not”</p>
 the time from the date</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (<span class="hljs-built_in">isNaN</span>(value) || options.dateOnly &amp;&amp; value % <span class="hljs-number">86400000</span> !== <span class="hljs-number">0</span>) {
         err = options.notValid ||
           options.message ||
@@ -1746,20 +1746,20 @@ the time from the date</p>
       <span class="hljs-keyword">var</span> message = options.message || <span class="hljs-keyword">this</span>.message || <span class="hljs-string">"is invalid"</span>
         , pattern = options.pattern
         , match;</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-61">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-61">&#182;</a>
               </div>
               <p>Empty values are allowed</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (!v.isDefined(value)) {
         <span class="hljs-keyword">return</span>;
       }
@@ -1776,20 +1776,20 @@ the time from the date</p>
       }
     },
     <span class="hljs-attr">inclusion</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, options</span>) </span>{</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-62">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-62">&#182;</a>
               </div>
               <p>Empty values are fine</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (!v.isDefined(value)) {
         <span class="hljs-keyword">return</span>;
       }
@@ -1806,20 +1806,20 @@ the time from the date</p>
       <span class="hljs-keyword">return</span> v.format(message, {<span class="hljs-attr">value</span>: value});
     },
     <span class="hljs-attr">exclusion</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, options</span>) </span>{</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-63">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-63">&#182;</a>
               </div>
               <p>Empty values are fine</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (!v.isDefined(value)) {
         <span class="hljs-keyword">return</span>;
       }
@@ -1839,20 +1839,20 @@ the time from the date</p>
     <span class="hljs-attr">email</span>: v.extend(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, options</span>) </span>{
       options = v.extend({}, <span class="hljs-keyword">this</span>.options, options);
       <span class="hljs-keyword">var</span> message = options.message || <span class="hljs-keyword">this</span>.message || <span class="hljs-string">"is not a valid email"</span>;</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-64">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-64">&#182;</a>
               </div>
               <p>Empty values are fine</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (!v.isDefined(value)) {
         <span class="hljs-keyword">return</span>;
       }
@@ -1894,13 +1894,13 @@ the time from the date</p>
         <span class="hljs-keyword">return</span> v.format(message, {<span class="hljs-attr">attribute</span>: prettify(options.attribute)});
       }
     },</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-65">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-65">&#182;</a>
               </div>
@@ -1908,7 +1908,7 @@ the time from the date</p>
 restrict schemes and some domains.</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>    url: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, options</span>) </span>{
       <span class="hljs-keyword">if</span> (!v.isDefined(value)) {
         <span class="hljs-keyword">return</span>;
@@ -1923,51 +1923,51 @@ restrict schemes and some domains.</p>
       <span class="hljs-keyword">if</span> (!v.isString(value)) {
         <span class="hljs-keyword">return</span> message;
       }</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-66">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-66">&#182;</a>
               </div>
               <p><a href="https://gist.github.com/dperini/729294">https://gist.github.com/dperini/729294</a></p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">var</span> regex =
         <span class="hljs-string">"^"</span> +</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-67">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-67">&#182;</a>
               </div>
               <p>protocol identifier</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>        <span class="hljs-string">"(?:(?:"</span> + schemes.join(<span class="hljs-string">"|"</span>) + <span class="hljs-string">")://)"</span> +</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-68">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-68">&#182;</a>
               </div>
               <p>user:pass authentication</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>        <span class="hljs-string">"(?:\\S+(?::\\S*)?@)?"</span> +
         <span class="hljs-string">"(?:"</span>;
 
@@ -1977,13 +1977,13 @@ restrict schemes and some domains.</p>
         tld += <span class="hljs-string">"?"</span>;
       } <span class="hljs-keyword">else</span> {
         regex +=</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-69">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-69">&#182;</a>
               </div>
@@ -1991,20 +1991,20 @@ restrict schemes and some domains.</p>
 private &amp; local networks</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>          <span class="hljs-string">"(?!(?:10|127)(?:\\.\\d{1,3}){3})"</span> +
           <span class="hljs-string">"(?!(?:169\\.254|192\\.168)(?:\\.\\d{1,3}){2})"</span> +
           <span class="hljs-string">"(?!172\\.(?:1[6-9]|2\\d|3[0-1])(?:\\.\\d{1,3}){2})"</span>;
       }
 
       regex +=</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-70">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-70">&#182;</a>
               </div>
@@ -2015,90 +2015,90 @@ excludes network &amp; broacast addresses
 (first &amp; last IP address of each class)</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>          <span class="hljs-string">"(?:[1-9]\\d?|1\\d\\d|2[01]\\d|22[0-3])"</span> +
           <span class="hljs-string">"(?:\\.(?:1?\\d{1,2}|2[0-4]\\d|25[0-5])){2}"</span> +
           <span class="hljs-string">"(?:\\.(?:[1-9]\\d?|1\\d\\d|2[0-4]\\d|25[0-4]))"</span> +
         <span class="hljs-string">"|"</span> +</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-71">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-71">&#182;</a>
               </div>
               <p>host name</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>          <span class="hljs-string">"(?:(?:[a-z\\u00a1-\\uffff0-9]-*)*[a-z\\u00a1-\\uffff0-9]+)"</span> +</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-72">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-72">&#182;</a>
               </div>
               <p>domain name</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>          <span class="hljs-string">"(?:\\.(?:[a-z\\u00a1-\\uffff0-9]-*)*[a-z\\u00a1-\\uffff0-9]+)*"</span> +
           tld +
         <span class="hljs-string">")"</span> +</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-73">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-73">&#182;</a>
               </div>
               <p>port number</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>        <span class="hljs-string">"(?::\\d{2,5})?"</span> +</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-74">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-74">&#182;</a>
               </div>
               <p>resource path</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>        <span class="hljs-string">"(?:[/?#]\\S*)?"</span> +
       <span class="hljs-string">"$"</span>;
 
       <span class="hljs-keyword">if</span> (allowDataUrl) {</pre></div></div>
-            
+
         </li>
-        
-        
+
+
         <li id="section-75">
             <div class="annotation">
-              
+
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-75">&#182;</a>
               </div>
               <p>RFC 2397</p>
 
             </div>
-            
+
             <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">var</span> mediaType = <span class="hljs-string">"\\w+\\/[-+.\\w]+(?:;[\\w=]+)*"</span>;
         <span class="hljs-keyword">var</span> urlchar = <span class="hljs-string">"[A-Za-z0-9-_.!~\\*'();\\/?:@&amp;=+$,%]*"</span>;
         <span class="hljs-keyword">var</span> dataurl = <span class="hljs-string">"data:(?:"</span>+mediaType+<span class="hljs-string">")?(?:;base64)?,"</span>+urlchar;
@@ -2195,9 +2195,9 @@ excludes network &amp; broacast addresses
         <span class="hljs-keyword">typeof</span> exports !== <span class="hljs-string">'undefined'</span> ? <span class="hljs-comment">/* istanbul ignore next */</span> exports : <span class="hljs-literal">null</span>,
         <span class="hljs-keyword">typeof</span> <span class="hljs-built_in">module</span> !== <span class="hljs-string">'undefined'</span> ? <span class="hljs-comment">/* istanbul ignore next */</span> <span class="hljs-built_in">module</span> : <span class="hljs-literal">null</span>,
         <span class="hljs-keyword">typeof</span> define !== <span class="hljs-string">'undefined'</span> ? <span class="hljs-comment">/* istanbul ignore next */</span> define : <span class="hljs-literal">null</span>);</pre></div></div>
-            
+
         </li>
-        
+
     </ul>
   </div>
 </body>
